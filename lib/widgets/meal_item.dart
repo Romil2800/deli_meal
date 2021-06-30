@@ -11,13 +11,14 @@ class MealItem extends StatelessWidget {
   final Complexity complexity;
   final Affordability affordability;
 
-  MealItem(
-      {@required this.id,
-      @required this.title,
-      @required this.imageUrl,
-      @required this.affordability,
-      @required this.complexity,
-      @required this.duration,});
+  MealItem({
+    @required this.id,
+    @required this.title,
+    @required this.imageUrl,
+    @required this.affordability,
+    @required this.complexity,
+    @required this.duration,
+  });
 
   String get complexityText {
     switch (complexity) {
@@ -91,10 +92,10 @@ class MealItem extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  bottom: 20,
+                  bottom: 10,
                   right: 10,
                   child: Container(
-                    width: 300,
+                    width: 350,
                     color: Colors.black54,
                     padding: EdgeInsets.symmetric(
                       vertical: 5,

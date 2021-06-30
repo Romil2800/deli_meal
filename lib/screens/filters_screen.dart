@@ -54,6 +54,13 @@ class _FiltersScreenState extends State<FiltersScreen> {
           IconButton(
             icon: Icon(Icons.save),
             onPressed: () {
+              final scaffold = ScaffoldMessenger.of(context);
+              scaffold.showSnackBar(
+                SnackBar(
+                  content: const Text('Saved'),
+                ),
+              );
+
               final selectedFilters = {
                 'gluten': _glutenFree,
                 'lactose': _lactoseFree,
